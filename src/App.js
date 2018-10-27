@@ -11,7 +11,6 @@ class App extends Component {
     InputValue : `const abc = {
                 [ENGLISH]: 2057,
                 [GERMAN]: 1031,
-             
             }
 
 `,
