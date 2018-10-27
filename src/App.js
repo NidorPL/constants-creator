@@ -8,14 +8,12 @@ class App extends Component {
       constString : "",
       constsObject : "",
       moduleExports : "",
-    InputValue : `const G8_LANGUAGE_MAP = {
+    InputValue : `const abc = {
                 [ENGLISH]: 2057,
                 [GERMAN]: 1031,
-                [ARABIC]: 10241,
-                [DEUTSCH]: 1111,
-                [FRANCOUIS]: 1111,
-                [BOBBY]: 1111,
+             
             }
+
 `,
 
   }
@@ -75,7 +73,7 @@ class App extends Component {
   }
   parseConst(c) {
       try {
-          const mapTitle = c.substring(6, 21)
+          const mapTitle = c.substring(6, c.indexOf("=")-1)
           let json = this.getJSONFromString(c)
 
           // const ENGLISH = "ENGLISH"
@@ -86,7 +84,7 @@ class App extends Component {
           constsObject += mapTitle + ", \n"
 
           for (let k in json) {
-              constString += "const " + k + " = " + "\"" + k + "\ \n"
+              constString += "const " + k + " = " + "\"" + k +  "\" \n"
               constsObject += k + ",\n"
           }
           constsObject += "}"
