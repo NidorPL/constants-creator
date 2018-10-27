@@ -78,7 +78,10 @@ class App extends Component {
           const mapTitle = c.substring(6, 21)
           let json = this.getJSONFromString(c)
 
+          // const ENGLISH = "ENGLISH"
           let constString = ""
+
+          // const consts = { G8_LANGUAGE_MAP,
           let constsObject = "const consts = { \n "
           constsObject += mapTitle + ", \n"
 
