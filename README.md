@@ -15,7 +15,7 @@ const abc = {
 
 ```
 
-to get the pieces you need:
+to get the other pieces
 
 ```
 const ENGLISH = "ENGLISH"
