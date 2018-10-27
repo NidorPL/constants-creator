@@ -1,4 +1,4 @@
-## Simple constants generator.
+## Simple constants creator.
 
 https://constants-creator.herokuapp.com/
 
