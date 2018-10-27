@@ -110,6 +110,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <p className="AppTitle">constans creator</p>
         </header>
           <div className="MainInputArea">
               <Input className="InputField" type="textarea" name="text" id="exampleText"
