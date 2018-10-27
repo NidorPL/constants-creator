@@ -1,6 +1,7 @@
 {
   "name": "constants-creator",
   "version": "0.1.0",
+  "author": "NidorPL",
   "private": true,
   "dependencies": {
     "react": "^16.6.0",
