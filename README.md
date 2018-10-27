@@ -7,26 +7,25 @@ https://constants-creator.herokuapp.com/
 write like:
 
 ```
-const G8_LANGUAGE_MAP = {
+const abc = {
                 [ENGLISH]: 2057,
                 [GERMAN]: 1031,
-                [ARABIC]: 10241,
-                }
+            }
+
+
 ```
 
 to get
 
 ```
-const ENGLISH = "ENGLISH
-const GERMAN = "GERMAN
-const ARABIC = "ARABIC
+const ENGLISH = "ENGLISH"
+const GERMAN = "GERMAN"
 
 const consts = {
- G8_LANGUAGE_MAP,
+abc,
 ENGLISH,
 GERMAN,
-ARABIC,
 }
-
 module.exports = consts
+
 ```
