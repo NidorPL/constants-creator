@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 70s linear;
   height: 55px;
   position: absolute;
   left: 20px;
@@ -24,7 +24,7 @@ body {
   font-size: 20px;
   position: relative;
   top:15px;
-  left: -78px;
+  left: -80px;
 }
 .MainInputArea {
   margin-top: 10px;
@@ -39,6 +39,8 @@ body {
   width: 100%;
   font-size: 15px;
   display: block;
+  border-radius: 5px;
+
 }
 
 
@@ -49,6 +51,8 @@ body {
   width: 70%;
   height: 400px;
   font-size: 15px;
+  border-radius: 5px;
+
 }
 
 @keyframes App-logo-spin {
