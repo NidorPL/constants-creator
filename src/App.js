@@ -80,7 +80,7 @@ class App extends Component {
           let constString = ""
 
           // const consts = { G8_LANGUAGE_MAP,
-          let constsObject = "const consts = { \n "
+          let constsObject = "const consts = { \n"
           constsObject += mapTitle + ", \n"
 
           for (let k in json) {
