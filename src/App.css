@@ -9,15 +9,16 @@
   left: 20px;
   top: 20px;
 }
-.App {
+body {
   background-color: #282c34;
-  height: 100vmin;
+}
+.App {
   display: flex;
   justify-content: center;
 
 }
 .MainInputArea {
-  margin-top: 80px;
+  margin-top: 50px;
   width: 65%;
   font-size: 15px;
 
