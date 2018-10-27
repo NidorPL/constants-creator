@@ -25,18 +25,29 @@ class App extends Component {
 
   componentDidMount() {
       try {
-          this.parseConst(this.state.InputValue)
+          const elements = this.parseConst(this.state.InputValue)
+          this.setState({
+              constString: elements.constString,
+              constsObject: elements.constsObject,
+              moduleExports: elements.moduleExports
+          })
       }catch (e) {
-          console.log("compinentDidMount Error");
+          console.error("compinentDidMount Error");
       }
   }
 
   handleChange(i) {
-      this.setState({InputValue: i.target.InputValue})
       try {
-      this.parseConst(i.target.InputValue)
+          const elements = this.parseConst(i.target.value)
+          this.setState({
+              InputValue: i.target.InputValue,
+              constString: elements.constString,
+              constsObject: elements.constsObject,
+              moduleExports: elements.moduleExports
+          })
+
     }catch (e) {
-          console.log("handleChangeError");
+          console.error("changeError");
       }
   }
 
@@ -53,23 +64,18 @@ class App extends Component {
       string = string.replace(/\n/g,'')
       string = string.replace(/ /g,'')
       let constantsArray = string.substring(string.indexOf("{")+1,string.indexOf("}")-2).split(",")
-      console.log(constantsArray);
-
       let constantsJson = {}
       constantsArray.forEach(c => {
           let key = this.getKey(c)
           let value = this.getValue(c)
           constantsJson[key] = value
       })
-      console.log(constantsJson);
       return constantsJson
 
   }
   parseConst(c) {
       try {
-          console.log("parsing");
           const mapTitle = c.substring(6, 21)
-          console.log("trying to iterate");
           let json = this.getJSONFromString(c)
 
           let constString = ""
@@ -83,12 +89,6 @@ class App extends Component {
           constsObject += "}"
           const moduleExports = "module.exports = consts"
 
-
-
-
-          this.state.constString = constString
-          this.state.constsObject = constsObject
-          this.state.moduleExports = moduleExports
           return {
               constString,
               constsObject,
