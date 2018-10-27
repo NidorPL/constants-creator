@@ -22,9 +22,9 @@ body {
 .AppTitle {
   color:lightgrey;
   font-size: 20px;
-  position: relative;
-  top:15px;
-  left: -80px;
+  position: absolute;
+  left: 85px;
+  top: 16px;
 }
 .MainInputArea {
   margin-top: 10px;
